@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 @layer base {
     body {
-        @apply bg-background text-black dark:bg-background-dark dark:text-white;
+        background-color: transparent;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
     }
 }
 
@@ -21,6 +30,6 @@
 }
 
 .animate-gradient {
-    background-size: 200% 200%;
+    background-size: 300%;
     animation: gradient-x 4s ease infinite;
 }
