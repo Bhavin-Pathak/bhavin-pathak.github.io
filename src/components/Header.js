@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BackButton } from "./BackButton.js";
 
 export default function Header({ title, subtitle }) {
+    // state to track if the user has scrolled
     const [isScrolled, setIsScrolled] = useState(false);
-
+    // useEffect to update the state when the user scrolls
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -16,12 +17,11 @@ export default function Header({ title, subtitle }) {
     return (
         <div className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? "bg-black/50 backdrop-blur-md" : "bg-transparent"}`}>
             <div className="w-full h-16 flex items-center justify-center relative px-4 md:px-8">
-                {/* Back Button - Absolute Left */}
+                {/* Back Button */}
                 <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-50">
                     <BackButton />
                 </div>
-
-                {/* Title & Subtitle - Centered */}
+                {/* Title & Subtitle */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5, y: -20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
