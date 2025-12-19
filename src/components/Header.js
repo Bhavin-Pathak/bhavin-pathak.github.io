@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BackButton } from "./BackButton.js";
+import PropTypes from "prop-types";
 
 export default function Header({ title, subtitle }) {
     // state to track if the user has scrolled
@@ -40,7 +41,6 @@ export default function Header({ title, subtitle }) {
     );
 }
 
-import PropTypes from "prop-types";
 
 Header.propTypes = {
     title: PropTypes.string.isRequired,
