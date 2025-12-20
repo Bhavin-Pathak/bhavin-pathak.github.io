@@ -9,7 +9,7 @@ html {
 
 @layer base {
     body {
-        background-color: transparent;
+        background-color: #000000;
         color: white;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
