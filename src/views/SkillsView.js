@@ -79,7 +79,7 @@ export default function SkillsView() {
                                     <div className="p-3 bg-white/10 rounded-xl">
                                         <Icon className="w-8 h-8 text-blue-400" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                                    <h3 className="text-lg md:text-xl font-bold text-white">{category.name}</h3>
                                 </div>
                                 <div className="space-y-6">
                                     {category.skills.map((skill, sIdx) => (

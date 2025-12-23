@@ -44,10 +44,10 @@ export default function AboutView() {
                             transition={{ duration: 0.5, delay: 0.2, ease: "backOut" }}
                             className="space-y-6 text-gray-900 dark:text-white"
                         >
-                            <p className="text-xl text-blue-700 dark:text-blue-200 border-l-4 border-blue-500 pl-4 bg-black/5 dark:bg-black/20 p-2 rounded-r">
+                            <p className="text-lg md:text-xl text-blue-700 dark:text-blue-200 border-l-4 border-blue-500 pl-4 bg-black/5 dark:bg-black/20 p-2 rounded-r">
                                 {aboutData.subtitle}
                             </p>
-                            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed text-lg font-sans mix-blend-normal">
+                            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg font-sans mix-blend-normal">
                                 <p className="backdrop-blur-none">{aboutData.bio1}</p>
                                 <p className="backdrop-blur-none">{aboutData.bio2}</p>
                             </div>
@@ -57,7 +57,7 @@ export default function AboutView() {
                                     { icon: Linkedin, href: aboutData.social.linkedin, label: "LinkedIn" },
                                     { icon: Github, href: aboutData.social.github, label: "GitHub" },
                                     { icon: Code, href: aboutData.social.leetcode, label: "LeetCode" },
-                                    { icon: DownloadCloud, href: aboutData.social.resume, label: "Download CV" },
+                                    { icon: DownloadCloud, href: aboutData.social.resume, label: "Resume" },
                                 ].map((item, idx) => (
                                     <a
                                         key={idx}

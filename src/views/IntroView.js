@@ -18,22 +18,22 @@ export default function IntroView({ onEnter }) {
                 className="z-10 text-center px-4"
             >
                 {/* Greeting */}
-                <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 mb-4 font-medium tracking-wide">
+                <p className="text-lg md:text-2xl text-gray-500 dark:text-gray-400 mb-4 font-medium tracking-wide">
                     {homeData.greeting}
                 </p>
                 {/* Name */}
-                <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tight">
+                <h1 className="text-4xl md:text-8xl font-black mb-6 tracking-tight">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient bg-300%">{homeData.name}</span>
                 </h1>
                 {/* Role */}
-                <h2 className="text-2xl md:text-4xl text-gray-800 dark:text-white mb-6 font-bold">
+                <h2 className="text-xl md:text-4xl text-gray-800 dark:text-white mb-6 font-bold">
                     {homeData.role}
                 </h2>
                 {/* Tagline */}
-                <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                     {homeData.tagline}
                 </p>
-                <LiquidButton onClick={onEnter} className="text-lg px-12 py-5 rounded-full shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)]">
+                <LiquidButton onClick={onEnter} className="text-base px-10 py-4 rounded-full shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)]">
                     {homeData.enterText}
                 </LiquidButton>
             </motion.div>

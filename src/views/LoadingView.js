@@ -4,13 +4,11 @@ import PropTypes from "prop-types";
 
 // Terminal text that will be displayed on loading with terminal effect 
 const bootSequence = [
-    "> Initializing Core Systems...",
-    "> Establishing Secure Handshake...",
-    "> Loading Bhavin's Neural Path...",
-    "> Compiling Full-Stack Modules...",
-    "> Fetching Portfolio Assets...",
-    "> Rendering 3D Environment...",
-    "> Access Granted. Welcome."
+    "> Initializing...",
+    "> Synchronizing...",
+    "> Establishing connection...",
+    "> Optimizing...",
+    "> Ready..."
 ];
 
 // Loading View Component

@@ -9,17 +9,17 @@ export default function HomeView() {
     const navigate = useNavigate();
     // Menu items data
     const menuItems = [
-        { label: "About", path: "/about", icon: User, color: "from-blue-500 to-cyan-500" },
-        { label: "Skills", path: "/skills", icon: Cpu, color: "from-purple-500 to-pink-500" },
+        { label: "Identity", path: "/about", icon: User, color: "from-blue-500 to-cyan-500" },
+        { label: "The Stack", path: "/skills", icon: Cpu, color: "from-purple-500 to-pink-500" },
         { label: "Experience", path: "/experience", icon: Briefcase, color: "from-orange-500 to-red-500" },
-        { label: "Projects", path: "/projects", icon: Code, color: "from-green-500 to-emerald-500" },
-        { label: "Contact", path: "/contact", icon: Mail, color: "from-gray-500 to-slate-500" },
+        { label: "Works", path: "/projects", icon: Code, color: "from-green-500 to-emerald-500" },
+        { label: "Connect", path: "/contact", icon: Mail, color: "from-gray-500 to-slate-500" },
     ];
     return (
         <div className="flex-grow h-full flex items-center justify-center p-4">
             {/* Desktop: Max width increased for horizontal layout Mobile: Standard width */}
             <LiquidContainer className="w-full md:max-w-6xl p-6 md:p-12">
-                <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                <h2 className="text-2xl md:text-5xl font-bold text-center mb-8 md:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                     {homeData.homeTitle}
                 </h2>
                 {/* Mobile: Vertical Stack (flex-col) Desktop: Horizontal Row (md:flex-row) */}
@@ -42,7 +42,7 @@ export default function HomeView() {
                                 <item.icon className="w-6 h-6 md:w-8 md:h-8 text-gray-800 dark:text-white" />
                             </div>
                             {/* Label */}
-                            <span className="text-lg md:text-xl font-medium text-gray-800 dark:text-white/90 group-hover:text-black dark:group-hover:text-white tracking-wide">
+                            <span className="text-base md:text-xl font-medium text-gray-800 dark:text-white/90 group-hover:text-black dark:group-hover:text-white tracking-wide">
                                 {item.label}
                             </span>
                             {/* Mobile Arrow (Hidden on Desktop) */}

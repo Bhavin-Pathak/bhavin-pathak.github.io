@@ -21,6 +21,9 @@ export default function ContactView() {
                     <div className="flex flex-col items-center gap-8 md:gap-12">
                         <div className="w-full max-w-4xl">
                             {/* Links Data */}
+                            <h2 className="text-2xl md:text-5xl font-bold text-center mb-8 md:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                                {contactData.availability}
+                            </h2>
                             {(() => {
                                 const contactLinks = [
                                     { icon: Linkedin, href: aboutData.social.linkedin, label: "Connect on LinkedIn", color: "text-blue-400" },
