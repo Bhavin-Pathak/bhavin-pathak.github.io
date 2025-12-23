@@ -29,10 +29,10 @@ export default function Header({ title, subtitle }) {
                     transition={{ duration: 0.6, ease: "backOut", delay: 0.2 }}
                     className="text-center pt-1"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight whitespace-nowrap">
+                    <h2 className="text-xl md:text-3xl font-bold text-white tracking-tight whitespace-nowrap">
                         {title}
                     </h2>
-                    <p className="text-xs md:text-sm text-gray-400 mt-0.5 opacity-100">
+                    <p className="text-[10px] md:text-sm text-gray-400 mt-0.5 opacity-100">
                         {subtitle}
                     </p>
                 </motion.div>
