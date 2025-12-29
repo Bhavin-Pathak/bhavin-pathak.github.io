@@ -10,9 +10,9 @@ export function BackButton({ to, className = "" }) {
     // Function For Handling Back Button Click
     const handleBack = () => {
         if (to) {
-            navigate(to);
+            navigate(to, { replace: true });
         } else {
-            navigate('/');
+            navigate('/', { replace: true });
         }
     };
 
