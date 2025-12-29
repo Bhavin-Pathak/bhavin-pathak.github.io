@@ -4,16 +4,16 @@ import PropTypes from "prop-types";
 import pkg from "../../package.json";
 
 const devLines = [
-    "> Initializing project...",
-    "> npm install",
+    "> Initializing repository...",
+    "> Connecting to gh-pages...",
+    "> npm install...",
+    "> Starting dev server...",
     "> Loading assets...",
     "> Compiling styles...",
     "> Linking components...",
-    "> Connecting to gh-pages...",
-    "> Starting dev server...",
     "> Applying dark theme...",
     "> Finalizing development build...",
-    "> Ready to launch!"
+    "> Ready to launch..."
 ];
 
 export default function LoadingView({ onComplete }) {
@@ -50,7 +50,7 @@ export default function LoadingView({ onComplete }) {
                     className="fixed inset-0 bg-[#050505] z-[100] flex flex-col items-center justify-center overflow-hidden"
                 >
                     {/* One-by-One Animated Line Preview (Bottom) */}
-                    <div className="absolute bottom-[15%] inset-x-0 flex justify-center opacity-[0.15] pointer-events-none select-none">
+                    <div className="absolute bottom-[15%] inset-x-0 flex justify-center opacity-40 pointer-events-none select-none">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={lineIndex}
@@ -58,7 +58,7 @@ export default function LoadingView({ onComplete }) {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                                className="font-mono font-bold text-blue-400 uppercase tracking-[0.5em] text-[1.2vw] md:text-[0.8vw] text-center"
+                                className="font-mono font-bold text-white uppercase tracking-[0.5em] text-[1.2vw] md:text-[0.8vw] text-center"
                             >
                                 {devLines[lineIndex]}
                             </motion.div>
@@ -72,7 +72,7 @@ export default function LoadingView({ onComplete }) {
                                 opacity: [0.1, 0.15, 0.1]
                             }}
                             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                            className="absolute top-0 left-0 w-full h-full bg-blue-600/10 rounded-full blur-[120px]"
+                            className="absolute top-0 left-0 w-full h-full bg-primary/10 rounded-full blur-[120px]"
                         />
                     </div>
                     <div className="relative z-10 flex flex-col items-center">
@@ -81,18 +81,18 @@ export default function LoadingView({ onComplete }) {
                             <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                                className="absolute inset-0 border-2 border-t-blue-500 border-r-transparent border-b-purple-500 border-l-transparent rounded-full shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                                className="absolute inset-0 border-2 border-t-primary border-r-transparent border-b-primary-dark border-l-transparent rounded-full shadow-[0_0_20px_rgba(37,99,235,0.3)]"
                             />
                             <motion.div
                                 animate={{ rotate: -360 }}
                                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                                className="absolute inset-3 border-2 border-t-transparent border-r-cyan-400 border-b-transparent border-l-cyan-400 rounded-full opacity-60"
+                                className="absolute inset-3 border-2 border-t-transparent border-r-primary/60 border-b-transparent border-l-primary/60 rounded-full opacity-60"
                             />
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <motion.span
                                     initial={{ scale: 0.8, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
-                                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 via-cyan-400 to-purple-400 drop-shadow-sm"
+                                    className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary via-primary-dark to-primary drop-shadow-sm"
                                 >
                                     {Math.floor(progress)}%
                                 </motion.span>
@@ -102,29 +102,23 @@ export default function LoadingView({ onComplete }) {
                         <div className="w-64 md:w-96 space-y-5">
                             <div className="h-[2px] w-full bg-white/5 rounded-full overflow-hidden">
                                 <motion.div
-                                    className="h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                                    className="h-full bg-gradient-to-r from-primary via-primary-dark to-primary shadow-[0_0_10px_rgba(37,99,235,0.5)]"
                                     initial={{ width: "0%" }}
                                     animate={{ width: `${progress}%` }}
                                     transition={{ duration: 0.1 }}
                                 />
                             </div>
-                            <div className="flex justify-between items-center text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/50 font-bold">
+                            <div className="flex justify-between items-center text-[10px] md:text-xs uppercase tracking-[0.25em] text-white font-bold">
                                 <motion.span
                                     animate={{ opacity: [0.6, 1, 0.6] }}
                                     transition={{ duration: 2, repeat: Infinity }}
                                 >
                                     Initializing Portfolio...
                                 </motion.span>
-                                <span className="text-blue-400/80">v{version}</span>
+                                <span className="text-white/80">v{version}</span>
                             </div>
                         </div>
                     </div>
-                    {/* Scanning Line Effect - Lighter & More Subtle */}
-                    <motion.div
-                        animate={{ y: ["0%", "100%", "0%"] }}
-                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/5 to-transparent pointer-events-none"
-                    />
                 </motion.div>
             )}
         </AnimatePresence>
